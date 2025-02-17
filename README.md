@@ -47,6 +47,11 @@ JWT_SECRET=tu_secreto_super_seguro_aqui
 4. Inicia el servidor de desarrollo:
 ```bash
 npm run dev
+```
+
+5. Para correr los test:
+```bash
+npm test
 
 
 
