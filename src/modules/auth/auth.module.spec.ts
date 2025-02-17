@@ -6,7 +6,7 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { User } from '../users/entities/user.entity';
 import { DatabaseModule } from '../../config/database/database.module';
 
-jest.setTimeout(30000); // Aumentar el timeout a 30 segundos
+jest.setTimeout(30000); 
 
 describe('AuthModule', () => {
   let module: TestingModule;

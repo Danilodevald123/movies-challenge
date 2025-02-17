@@ -15,7 +15,7 @@ describe('AuthService', () => {
 
   const testDate = new Date();
 
-  const mockUser = {
+  /* const mockUser = {
     id: '1',
     email: 'test@example.com',
     password: 'hashedPassword',
@@ -25,7 +25,7 @@ describe('AuthService', () => {
     toJSON: function() {
       return classToPlain(this);
     }
-  };
+  }; */
 
   const mockUsersService = {
     findByEmail: jest.fn(),

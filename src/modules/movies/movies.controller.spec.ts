@@ -7,7 +7,6 @@ describe('MoviesController', () => {
   let controller: MoviesController;
   let service: MoviesService;
 
-  // Mock del servicio de películas
   const mockMoviesService = {
     findAll: jest.fn(),
     findOne: jest.fn(),

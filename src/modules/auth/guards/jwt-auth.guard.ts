@@ -22,15 +22,13 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
       return true;
     }
     
-    const request = context.switchToHttp().getRequest();
-    console.log(`JWT Auth Guard - Authenticating request to: ${request.url}`);
+    
 
     return super.canActivate(context);
   }
 
   handleRequest(err: any, user: any, info: any) {
     if (err || !user) {
-      console.error('JWT Auth Guard - Authentication failed:', { err, info });
       
       if (info?.name === 'TokenExpiredError') {
         throw new UnauthorizedException('Token has expired');
@@ -43,7 +41,6 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
       throw new UnauthorizedException('Unauthorized access');
     }
 
-    console.log('JWT Auth Guard - Authentication successful for user:', user.email);
     return user;
   }
 }

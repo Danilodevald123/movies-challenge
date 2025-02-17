@@ -14,15 +14,6 @@ describe('UsersService', () => {
 
   const testDate = new Date();
 
-  const mockUser = {
-    id: '1',
-    email: 'test@example.com',
-    password: 'hashedPassword',
-    role: UserRole.USER,
-    createdAt: testDate,
-    updatedAt: testDate,
-  };
-
   const mockUserRepository = {
     find: jest.fn(),
     findOne: jest.fn(),
@@ -221,8 +212,8 @@ describe('UsersService', () => {
       };
 
       mockUserRepository.findOne
-        .mockResolvedValueOnce(existingUser) // for findOne
-        .mockResolvedValueOnce({ id: '2', createdAt: testDate, updatedAt: testDate }); // for findByEmail check
+        .mockResolvedValueOnce(existingUser) 
+        .mockResolvedValueOnce({ id: '2', createdAt: testDate, updatedAt: testDate }); 
 
       await expect(
         service.update('1', { email: 'existing@example.com' }),

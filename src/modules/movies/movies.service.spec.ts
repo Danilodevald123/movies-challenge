@@ -198,15 +198,12 @@ describe('MoviesService', () => {
         episodeId: 2,
       };
 
-      // Simular que existe una película con el episodeId que queremos usar
       const existingMovieWithEpisodeId = {
         id: '2',
         title: 'Movie 2',
         episodeId: 2,
       };
 
-      // Primera llamada para findOne (buscar la película a actualizar)
-      // Segunda llamada para findOne (buscar si existe otra película con el mismo episodeId)
       mockRepository.findOne
         .mockResolvedValueOnce(movieToUpdate)
         .mockResolvedValueOnce(existingMovieWithEpisodeId);
@@ -234,8 +231,6 @@ describe('MoviesService', () => {
         ...updateMovieDto,
       };
 
-      // Primera llamada para findOne (buscar la película a actualizar)
-      // Segunda llamada para findOne (buscar si existe otra película con el mismo episodeId)
       mockRepository.findOne
         .mockResolvedValueOnce(movieToUpdate)
         .mockResolvedValueOnce(null);
@@ -271,7 +266,7 @@ describe('MoviesService', () => {
       const result = await service.update('1', updateMovieDto);
 
       expect(result).toEqual(updatedMovie);
-      expect(mockRepository.findOne).toHaveBeenCalledTimes(1); // Solo se llama una vez para buscar la película
+      expect(mockRepository.findOne).toHaveBeenCalledTimes(1); 
       expect(mockRepository.save).toHaveBeenCalledWith(updatedMovie);
     });
   });

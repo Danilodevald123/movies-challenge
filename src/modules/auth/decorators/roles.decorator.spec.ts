@@ -3,15 +3,12 @@ import { UserRole } from '../../users/entities/user.entity';
 
 describe('Roles Decorator', () => {
   it('should set metadata with roles', () => {
-    // Create a dummy target
     class TestClass {
       @Roles(UserRole.ADMIN)
       testMethod() {}
     }
-
-    // Get metadata
     const metadata = Reflect.getMetadata('roles', TestClass.prototype.testMethod);
-    
+
     expect(metadata).toBeDefined();
     expect(metadata).toEqual([UserRole.ADMIN]);
   });
@@ -21,7 +18,6 @@ describe('Roles Decorator', () => {
       @Roles(UserRole.ADMIN, UserRole.USER)
       testMethod() {}
     }
-
     const metadata = Reflect.getMetadata('roles', TestClass.prototype.testMethod);
     
     expect(metadata).toBeDefined();

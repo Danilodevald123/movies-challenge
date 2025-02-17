@@ -21,10 +21,8 @@ async function bootstrap() {
     }),
   );
 
-  // Serialización global
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
-  // Configuración de Swagger
   const config = new DocumentBuilder()
     .setTitle('Star Wars Movies API')
     .setDescription('API for managing movies and synchronizing with Star Wars API')
@@ -36,7 +34,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api-docs', app, document);
 
-  // Puerto desde variables de entorno
   const port = configService.get('PORT', 3000);
   await app.listen(port);
   console.log(`Application is running on: http://localhost:${port}`);
