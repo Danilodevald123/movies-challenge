@@ -16,6 +16,9 @@ Antes de comenzar, asegúrate de tener instalado:
 - Node.js (versión 20 o superior)
 - npm o yarn
 
+Ademas deberas crear una base de datos mySQL.
+
+
 ## 🔧 Instalación
 
 1. Clona el repositorio:
