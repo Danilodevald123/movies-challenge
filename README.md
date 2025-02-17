@@ -1,51 +1,52 @@
-# Movies Challenge
+# 🎬 Movies Challenge
 
-[![Node.js v20+](https://img.shields.io/badge/Node-v20%2B-green)](https://nodejs.org/)
-[![NestJS](https://img.shields.io/badge/NestJS-%23E0234E.svg?style=flat&logo=nestjs)](https://nestjs.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Una **API RESTful** para gestionar una colección de películas, construida con [NestJS](https://nestjs.com/).
+## 🛠️ Tecnologías Utilizadas
 
----
+- Nestjs
+- mySQL
+- TypeORM
+- Jest
+- TypeScript
 
-## Descripción
+## 📋 Prerrequisitos
 
-**Movies Challenge** es una aplicación backend desarrollada con NestJS, diseñada para demostrar habilidades en el desarrollo de APIs modernas. La aplicación permite realizar operaciones CRUD sobre películas, integrando funcionalidades de búsqueda y filtrado, y utiliza TypeORM para la gestión de la base de datos. Su arquitectura robusta y escalable la hace ideal para proyectos de aprendizaje y desafíos de programación.
+Antes de comenzar, asegúrate de tener instalado:
 
----
+- Node.js (versión 20 o superior)
+- npm o yarn
 
-## Características
+## 🔧 Instalación
 
-- **Operaciones CRUD:** Permite crear, leer, actualizar y eliminar registros de películas.
-- **Búsqueda y filtrado:** Realiza búsquedas por título, género, año de lanzamiento y otros criterios.
-- **Integración con Base de Datos:** Utiliza TypeORM para interactuar con bases de datos relacionales.
-- **Validación y Manejo de Errores:** Incluye validaciones robustas y manejo de errores para asegurar la integridad de los datos.
-- **Pruebas:** Cuenta con pruebas unitarias y pruebas de extremo a extremo para garantizar el correcto funcionamiento de la aplicación.
+1. Clona el repositorio:
+```bash
+git clone https://github.com/Danilodevald123/movies-challenge.git
+```
 
----
+2. Instala las dependencias:
+```bash
+cd movies-challenge
+npm install
+```
 
-## Tecnologías Utilizadas
+3. Crea un archivo .env y un .env.test y configura las variables de entorno necesarias:
+```
+example: 
 
-- **[NestJS](https://nestjs.com/):** Framework progresivo para construir aplicaciones Node.js eficientes y escalables.
-- **[TypeScript](https://www.typescriptlang.org/):** Superset de JavaScript que añade tipado estático.
-- **[TypeORM](https://typeorm.io/):** ORM para la gestión de bases de datos en Node.js.
-- **[Node.js](https://nodejs.org/):** Entorno de ejecución para JavaScript.
-- **[Jest](https://jestjs.io/):** Framework para pruebas.
+DB_HOST=localhost
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=prueba123
+DB_DATABASE=movies
+JWT_SECRET=tu_secreto_super_seguro_aqui
+```
 
----
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
 
-## Comenzando
 
-### Prerrequisitos
 
-- **Node.js v20 o superior**
-- **npm** (incluido con Node.js)
-- Una base de datos compatible con TypeORM (por ejemplo, PostgreSQL, MySQL, SQLite)
 
-### Instalación
 
-1. **Clonar el repositorio:**
 
-   ```bash
-   git clone https://github.com/Danilodevald123/movies-challenge.git
-   cd movies-challenge
