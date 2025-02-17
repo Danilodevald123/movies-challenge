@@ -52,6 +52,11 @@ npm run dev
 5. Para correr los test:
 ```bash
 npm test
+```
+
+6. Al levantar el proyecto veras un log con la url directa a la documentacion en Swagger, se vera algo como esto:
+```bash
+Swagger documentation is available at: http://localhost:3000/api-docs
 
 
 
