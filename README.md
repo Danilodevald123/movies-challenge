@@ -75,6 +75,15 @@ DB_DATABASE=bbiqdu6lakrtza8iloh0
 JWT_SECRET=tu_secreto_super_seguro_aqui
 ```
 
+8. Para testear exitosamente.
+
+* Crear 2 usuarios desde el endpoint de registro.
+
+* Modificar 1 de los usuarios desde la bd, para tener el rol de admin. 
+
+* Validar cada endpoint :) 
+
+9. Cualquier correcion, recomendacion o consejo, será mas que bienvenido, gracias. 
 
 
 
