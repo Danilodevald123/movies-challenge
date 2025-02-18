@@ -64,6 +64,8 @@ Swagger documentation is available at: http://localhost:3000/api-docs
 
 url base: https://movies-challenge-y4a2.onrender.com.
 
+url para probar el swagger: https://movies-challenge-y4a2.onrender.com/api-docs.
+
 .env para probar la conexion remota: 
 ```
 DB_HOST=bbiqdu6lakrtza8iloh0-mysql.services.clever-cloud.com
