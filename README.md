@@ -58,7 +58,22 @@ npm test
 6. Al levantar el proyecto veras un log con la url directa a la documentacion en Swagger, se vera algo como esto:
 ```bash
 Swagger documentation is available at: http://localhost:3000/api-docs
+```
 
+7. la api esta hosteada en un server gratuito:
+
+url base: https://movies-challenge-y4a2.onrender.com.
+
+.env para probar la conexion remota: 
+```
+DB_HOST=bbiqdu6lakrtza8iloh0-mysql.services.clever-cloud.com
+DB_PORT=3306
+PORT=3000
+DB_USERNAME=uwkoidspegbpmo8o
+DB_PASSWORD=jbpKBJGhIMIcpTc9Iaes
+DB_DATABASE=bbiqdu6lakrtza8iloh0
+JWT_SECRET=tu_secreto_super_seguro_aqui
+```
 
 
 
